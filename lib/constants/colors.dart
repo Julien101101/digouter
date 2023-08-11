@@ -6,19 +6,19 @@ class AppColors {
   static const String _color3 = '#FD4C9A';
   static const String _color4 = '#ED2700';
 
-  static textcolor() {
+  static Color textcolor() {
     return getColorFromHex(_color1);
   }
 
-  static color2() {
+  static Color color2() {
     return getColorFromHex(_color2);
   }
 
-  static color3() {
+  static Color color3() {
     return getColorFromHex(_color3);
   }
 
-  static color4() {
+  static Color color4() {
     return getColorFromHex(_color4);
   }
 
@@ -26,7 +26,7 @@ class AppColors {
     hexColor = hexColor.toUpperCase().replaceAll('#', '');
 
     if (hexColor.length == 6) {
-      hexColor = 'FF' + hexColor;
+      hexColor = 'FF$hexColor';
     }
 
     return Color(int.parse(hexColor, radix: 16));

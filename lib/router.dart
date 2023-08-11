@@ -1,28 +1,20 @@
+import 'package:digouter/screens/wass_up.dart';
+import 'package:digouter/screens/who_let_him_cook.dart';
+import 'package:digouter/screens/rap_battle.dart';
 import 'package:flutter/material.dart';
+// Import other screen classes as needed
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
     case 'wass_up':
       return MaterialPageRoute(builder: (context) => WassUpScreen());
-    case 'home':
-      return MaterialPageRoute(
-          builder: (context) => const HomePage(
-                title: 'Home Page',
-              ));
     case 'cook_it':
-      return MaterialPageRoute(
-          builder: (context) => const WhoLetHimCookScreen());
+      return MaterialPageRoute(builder: (context) => WhoLetHimCookScreen());
     case 'letsrap':
-      return MaterialPageRoute(builder: (context) => const RapBattle(),))
-    case 'settings':
-      return MaterialPageRoute(builder: (context) => SettingsScreen());
-    case 'logo':
-      return MaterialPageRoute(builder: (context) => LogoScreen());
+      return MaterialPageRoute(builder: (context) => RapBattleScreen());
 
     default:
-      return MaterialPageRoute(
-          builder: (context) => const HomePage(
-                title: 'Home Page',
-              ));
+      // If the provided route name doesn't match any case, navigate to a specific screen (e.g., WassUpScreen)
+      return MaterialPageRoute(builder: (context) => WassUpScreen());
   }
 }
