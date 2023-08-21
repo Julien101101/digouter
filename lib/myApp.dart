@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import class  {
-  
-}
+import 'router.dart';
 
 class MyApp extends StatelessWidget {
   final String initialRoute;

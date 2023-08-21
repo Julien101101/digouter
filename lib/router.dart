@@ -19,7 +19,7 @@ class AppRouter {
 
       default:
         // If the provided route name doesn't match any case, navigate to a specific screen (e.g., WassUpScreen)
-        return MaterialPageRoute(builder: (context) => WassUpScreen());
+        return MaterialPageRoute(builder: (context) => const OMatey());
     }
   }
 }

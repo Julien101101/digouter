@@ -18,7 +18,7 @@ import 'myApp.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  SharedPreferences prefs = await ShardedPreferences.getInstance();
+  SharedPreferences prefs = await SharedPreferences.getInstance();
   String? userName = prefs.getString('userName');
 
   runApp(MyApp(initialRoute: userName == null ? '/omatey' : '/mainScreen'));
