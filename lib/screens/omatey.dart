@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:digouter/util/forms/name_form.dart';
 
 class OMatey extends StatelessWidget {
-  const OMatey({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
+    final double horizontalPadding = MediaQuery.of(context).size.width * 0.125;
+
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(
-            horizontal: MediaQuery.of(context).size.width * 0.125),
+        padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("What is your name?"),
-              SizedBox(height: 20), // Add some spacing
-              TextFormField(),
+              const Text("What is your name?"),
+              const SizedBox(height: 20), // Add some spacing
+              NameForm(),
             ],
           ),
         ),

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "707747030679",
+    "firebase_url": "https://digouter-default-rtdb.firebaseio.com",
+    "project_id": "digouter",
+    "storage_bucket": "digouter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:707747030679:android:dbcedb3cde5acca2db6bd2",
+        "android_client_info": {
+          "package_name": "com.example.digouter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "707747030679-vnmu58b8fqsa082c9o24u7jdgstehjs0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPSgcC3R1hHLSOgoo-AjIAu12th4ZTvTA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "707747030679-vnmu58b8fqsa082c9o24u7jdgstehjs0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

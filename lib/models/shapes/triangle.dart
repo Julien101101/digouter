@@ -4,7 +4,7 @@ class Triangle extends StatelessWidget {
   final double size;
   final Color color;
 
-  Triangle({
+  const Triangle({super.key, 
     required this.size,
     required this.color,
   });

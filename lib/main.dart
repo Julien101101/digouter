@@ -7,25 +7,44 @@
 // third I would like to make it publisheable on the domain
 // digouter.app
 
-// --------------------------------------------
-//  ----------------IMPORTS--------------------
-//    -----------------------------------------
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'myApp.dart';
-//     ----------------------------------------
-//   ------------------------------------------
+import 'router.dart';
+import 'firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  String? userName = prefs.getString('userName');
 
-  runApp(MyApp(initialRoute: userName == null ? '/omatey' : '/mainScreen'));
+  //=========== checks ====================
+  try {
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+    print("Firebase works!");
+  } catch (e) {
+    print("Error initializing Firebase: $e");
+  }
+
+  // ----------------------------------------
+
+  runApp(MyApp(initialRoute: '/oMatey')); // Set your initial route here
 }
 
+class MyApp extends StatelessWidget {
+  final String initialRoute;
 
+  const MyApp({Key? key, required this.initialRoute}) : super(key: key);
 
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Digouter',
+      onGenerateRoute: AppRouter.generateRoute,
+      initialRoute: initialRoute,
+    );
+  }
+}
 // next import the bookmark chrome api
 
 // so that people can see and share bookmarks and engage
