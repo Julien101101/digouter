@@ -28,7 +28,7 @@ void main() async {
 
   // ----------------------------------------
 
-  runApp(MyApp(initialRoute: '/oMatey')); // Set your initial route here
+  runApp(const MyApp(initialRoute: '/oMatey')); // Set your initial route here
 }
 
 class MyApp extends StatelessWidget {

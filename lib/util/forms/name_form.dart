@@ -20,11 +20,6 @@ class _NameFormState extends State<NameForm> {
     await FirebaseFirestore.instance.collection('user_names').add({
       'name': name,
     });
-
-    Navigator.pushNamed(
-      context,
-      'WalkDaPlank',
-    );
   }
 
   @override
@@ -38,12 +33,16 @@ class _NameFormState extends State<NameForm> {
             _submitName(name, context);
           },
         ),
-        const SizedBox(height: 20),
+        const SizedBox(height: 25),
         ElevatedButton(
           onPressed: () {
             final name = nameController.text;
             if (name.isNotEmpty) {
               _submitName(name, context);
+              Navigator.pushNamed(
+                context,
+                'WalkDaPlank',
+              );
             } else {
               // Handle empty name input
               ScaffoldMessenger.of(context).showSnackBar(
