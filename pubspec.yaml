@@ -26,3 +26,14 @@ linter:
 
 flutter:
   uses-material-design: true
+
+  assets: 
+    - assets/
+
+  fonts:
+    - family: DaysOne-Regular
+      fonts:
+        - asset: assets/fonts/DaysOne-Regular.ttf
+    - family: Latin
+      fonts:
+        - asset: assets/fonts/Latin.ttf

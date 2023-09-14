@@ -12,7 +12,10 @@ class AppRouter {
         return MaterialPageRoute(builder: (context) => OMatey());
       case 'walkdaplank':
         return MaterialPageRoute(
-          builder: (context) => WalkDaPlank(enteredName: ""),
+          builder: (context) => WalkDaPlank(
+            enteredName: "",
+            clearCollection: () {},
+          ),
         );
       case 'cook_it':
         return MaterialPageRoute(
@@ -20,12 +23,13 @@ class AppRouter {
       case 'letsrap':
         return MaterialPageRoute(builder: (context) => RapBattle());
 
-      case 'nextScreen': // Change to the appropriate route name
-        // Access the enteredName from settings.arguments
-        final enteredName = settings.arguments as String;
-        return MaterialPageRoute(
-          builder: (context) => WalkDaPlank(enteredName: enteredName),
-        );
+      // case 'nextScreen': // Change to the appropriate route name
+      //   // Access the enteredName from settings.arguments
+      //   final enteredName = settings.arguments as String;
+      //   return MaterialPageRoute(
+      //     builder: (context) =>
+      //         WalkDaPlank(enteredName: enteredName, clearCollection: () {}),
+      //   );
 
       default:
         // If the provided route name doesn't match any case, navigate to a specific screen (e.g., WassUpScreen)

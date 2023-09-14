@@ -13,7 +13,10 @@ class OMatey extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text("What is your name?", style: TextStyle(fontSize: 30)),
+              const Text("What is your name?",
+                  style: TextStyle(
+                      fontSize: 30,
+                      fontFamily: 'DaysOne-Regular')),
               const SizedBox(height: 20), // Add some spacing
               NameForm(),
             ],
