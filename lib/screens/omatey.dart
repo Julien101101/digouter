@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:digouter/util/forms/name_form.dart';
+import 'package:digouter/util/name_form.dart';
 
 class OMatey extends StatelessWidget {
   @override

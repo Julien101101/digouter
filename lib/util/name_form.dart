@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import '../screens/walkdaplank.dart';
 
 class NameForm extends StatefulWidget {
   @override
@@ -35,13 +36,35 @@ class _NameFormState extends State<NameForm> {
         ),
         const SizedBox(height: 25),
         ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            primary: Color(0xFFBB01), // Set the background color
+            elevation: 5, // Add a slight elevation (shadow)
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10), // Apply rounded corners
+            ),
+            textStyle: TextStyle(
+              fontSize: 16, // Adjust the text size
+              fontWeight: FontWeight.bold, // Make the text bold
+            ),
+            padding: EdgeInsets.symmetric(
+                vertical: 15, horizontal: 30), // Adjust padding
+            side: BorderSide(
+              color: Colors.black, // Border color
+              width: 2.0, // Border width
+            ),
+          ),
           onPressed: () {
             final name = nameController.text;
             if (name.isNotEmpty) {
               _submitName(name, context);
-              Navigator.pushNamed(
+              Navigator.push(
                 context,
-                'WalkDaPlank',
+                MaterialPageRoute(
+                  builder: (context) => WalkDaPlank(
+                    enteredName: nameController.text,
+                    clearCollection: () {},
+                  ),
+                ),
               );
             } else {
               // Handle empty name input
@@ -54,8 +77,8 @@ class _NameFormState extends State<NameForm> {
               );
             }
           },
-          child: const Text('Walk Da PLANK'),
-        ),
+          child: Text('Walk da Plank'),
+        )
       ],
     );
   }

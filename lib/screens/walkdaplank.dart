@@ -5,7 +5,7 @@ class WalkDaPlank extends StatelessWidget {
 
   final Function clearCollection;
 
-  WalkDaPlank(
+  const WalkDaPlank(
       {Key? key, required this.enteredName, required this.clearCollection})
       : super(key: key);
 
@@ -30,6 +30,7 @@ class WalkDaPlank extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 // Implement your logic for the next screen
+                // sign into google button
               },
               child: const Text('Continue'),
             ),

@@ -11,9 +11,8 @@ import 'package:flutter/material.dart';
 import 'router.dart';
 import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   //=========== checks ====================
@@ -21,6 +20,7 @@ void main() async {
     await Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform,
     );
+
     print("Firebase works!");
   } catch (e) {
     print("Error initializing Firebase: $e");
